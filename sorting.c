@@ -172,3 +172,62 @@ void quickSort(int array[], int low, int high) {
     quickSort(array, pi + 1, high);
   }
 }
+int main(){
+
+  int n;
+  printf("choose size of array:\n");
+  scanf("%d", &n);
+  int data[n];
+  for(int i=0;i<n;i++){
+    printf("enter the %dth element of data:\n", i);
+    scanf("%d", &data[i]);
+  }
+
+  int size = sizeof(data) / sizeof(data[0]);
+
+  int op;
+ printf("which type of sorting you want to do:\n");
+ printf("1. insertion sort\n");
+ printf("2. Selection sort\n");
+ printf("3. Bubble sort\n");
+ printf("4. Merge sort\n");
+ printf("5. Quick sort\n");
+ printf("chosse type of sorting you want to do:\n");
+ scanf("%d", &op);
+ printf("Unsorted Array\n");
+ printArray(data, size);
+//calling insertion sort function
+ if(op==1){
+   insertionSort(data, size);
+   printf("Sorted array in ascending order:\n");
+   printArray(data, size);
+ }
+ //calling selection sort function
+ else if (op==2)
+ {
+   selectionSort(data, size);
+   printf("Sorted array in Acsending Order:\n");
+   printArray(data, size);
+ }
+ //calling Bubble sort function
+ else if (op==3)
+ {
+   bubbleSort(data, size);
+   printf("Sorted Array in Ascending Order:\n");
+   printArray(data, size);
+ }
+ //calling Merge sort function
+ else if (op==4)
+ {
+   mergeSort(data, 0, size - 1);
+   printf("Sorted arrayin Ascending order: \n");
+   printArray(data, size);
+ }
+ //calling quick sort function
+ else{
+   quickSort(data, 0, size - 1);
+   printf("Sorted array in ascending order: \n");
+   printArray(data, size);
+ }
+ return 0;
+}
