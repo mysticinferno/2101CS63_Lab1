@@ -9,3 +9,8 @@ void subtraction(long int a,long int b)
 {
     printf("%ld", a - b);
 }
+//multiplication Function
+void multiplication(long int a,long int b)
+{
+    printf("%ld", a * b);
+}
