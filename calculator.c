@@ -4,3 +4,8 @@ void addition(long int a,long int b)
 {
     printf("%ld", a + b);
 }
+//subtraction function
+void subtraction(long int a,long int b)
+{
+    printf("%ld", a - b);
+}
